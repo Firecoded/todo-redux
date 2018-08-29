@@ -8,7 +8,7 @@ import {
 	Route,
 	Link
 } from 'react-router-dom';
-import reduxPromise from 'redux-promise';
+import reduxPromise from './middleware/redux_promise';
 import App from './components/app';
 
 const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise));
