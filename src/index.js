@@ -9,9 +9,10 @@ import {
 	Link
 } from 'react-router-dom';
 import reduxPromise from './middleware/redux_promise';
+import think from './middleware/think';
 import App from './components/app';
 
-const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise));
+const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise, think));
 
 ReactDOM.render(
     <Provider store = {store}>
